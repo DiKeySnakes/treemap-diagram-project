@@ -67,18 +67,17 @@ const drawTreeMap = () => {
     .attr('height', (movie) => {
       return movie['y1'] - movie['y0'];
     })
-    .on('mouseover', (movie) => {
+    .on('mouseover', (e) => {
+      const target = e.target;
       tooltip.transition().style('visibility', 'visible');
 
-      const revenue = movie['data']['value']
-        .toString()
-        .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      tooltip.text(
+        `Title: ${target.dataset.name}, Category: ${target.dataset.category}, Value: ${target.dataset.value}`
+      );
 
-      tooltip.html('$ ' + revenue + '<hr />' + movie['data']['name']);
-
-      tooltip.attr('data-value', movie['data']['value']);
+      tooltip.attr('data-value', target.dataset.value);
     })
-    .on('mouseout', (movie) => {
+    .on('mouseout', () => {
       tooltip.transition().style('visibility', 'hidden');
     });
 
