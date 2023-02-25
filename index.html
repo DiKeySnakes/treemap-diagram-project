@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treemap Diagram Project</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <h1 id="title">Movie Sales</h1>
+    <h3 id="description">Top 100 Highest Grossing Movies Grouped By Genre</h3>
+    <svg id="canvas"></svg>
+    <div id="tooltip"></div>
+    <svg id="legend">
+      <g>
+        <rect
+          class="legend-item"
+          x="0"
+          y="0"
+          width="20"
+          height="20"
+          fill="rgba(125, 157, 232, 1)"></rect>
+        <text x="30" y="17" fill="black">Action</text>
+      </g>
+      <g>
+        <rect
+          class="legend-item"
+          x="140"
+          y="0"
+          width="20"
+          height="20"
+          fill="rgba(0, 221, 255, 1)"></rect>
+        <text x="170" y="17" fill="black">Adventure</text>
+      </g>
+      <g>
+        <rect
+          class="legend-item"
+          x="310"
+          y="0"
+          width="20"
+          height="20"
+          fill="rgba(255, 163, 51, 1)"></rect>
+        <text x="340" y="17" fill="black">Comedy</text>
+      </g>
+      <g>
+        <rect
+          class="legend-item"
+          x="460"
+          y="0"
+          width="20"
+          height="20"
+          fill="rgba(216, 200, 166, 1)"></rect>
+        <text x="490" y="17" fill="black">Drama</text>
+      </g>
+      <g>
+        <rect
+          class="legend-item"
+          x="590"
+          y="0"
+          width="20"
+          height="20"
+          fill="rgba(0, 255, 128, 1)"></rect>
+        <text x="620" y="17" fill="black">Animation</text>
+      </g>
+      <g>
+        <rect
+          class="legend-item"
+          x="750"
+          y="0"
+          width="20"
+          height="20"
+          fill="rgba(0, 189, 94, 1)"></rect>
+        <text x="780" y="17" fill="black">Family</text>
+      </g>
+      <g>
+        <rect
+          class="legend-item"
+          x="880"
+          y="0"
+          width="20"
+          height="20"
+          fill="rgba(255, 51, 92, 1)"></rect>
+        <text x="910" y="17" fill="black">Biography</text>
+      </g>
+    </svg>
+  </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
